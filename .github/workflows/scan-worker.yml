@@ -7,7 +7,7 @@ env:
     SYSDIG_SECURE_ENDPOINT: "https://eu1.app.sysdig.com"
     IMAGE_NAME: "svc_vote"
     IMAGE_TAG: "1.0"
-    DOCKERFILE_CONTEXT: "example-voting-app/vote"
+    DOCKERFILE_CONTEXT: "example-voting-app/worker"
 
 permissions:
   contents: write
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-22.04
     defaults:
         run:
-          working-directory: example-voting-app/vote/
+          working-directory: example-voting-app/worker/
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -27,7 +27,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Build the Docker image
-      run: docker build -t svc_vote:1.0 .
+      run: docker build -t svc_worker:1.0 .
 
     - name: Scan image
       id: scan
