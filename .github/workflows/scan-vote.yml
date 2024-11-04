@@ -9,6 +9,9 @@ env:
     IMAGE_TAG: "1.0"
     DOCKERFILE_CONTEXT: "example-voting-app/vote"
 
+permissions:
+  contents: write
+  
 jobs:
   build-scan-and-push:
     runs-on: ubuntu-22.04
