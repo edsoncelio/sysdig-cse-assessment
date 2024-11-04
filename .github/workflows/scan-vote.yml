@@ -23,7 +23,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Build the Docker image
-      run: docker build -t $IMAGE_NAME:$TAG .
+      run: docker build -t $IMAGE_NAME:$IMAGE_TAG .
 
     - name: Scan image
       id: scan
