@@ -33,7 +33,7 @@ jobs:
       id: scan
       uses: sysdiglabs/scan-action@v5
       with:
-          image-tag: svc_vote:1.0
+          image-tag: svc_worker:1.0
           sysdig-secure-token: ${{ secrets.SECURE_API_TOKEN }}
           sysdig-secure-url: https://app.us4.sysdig.com
 
