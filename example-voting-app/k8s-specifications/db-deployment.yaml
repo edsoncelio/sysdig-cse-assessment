@@ -28,6 +28,8 @@ spec:
         volumeMounts:
         - mountPath: /var/lib/postgresql/data
           name: db-data
+        securityContext:
+          readOnlyRootFilesystem: true
       volumes:
       - name: db-data
-        emptyDir: {} 
+        emptyDir: {}
