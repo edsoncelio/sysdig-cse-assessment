@@ -7,11 +7,12 @@ on:
 
 env:
     SYSDIG_SECURE_ENDPOINT: "https://eu1.app.sysdig.com"
-    IMAGE_NAME: "svc_vote"
-    IMAGE_TAG: "1.0"
+    IMAGE_NAME: "vote"
+    IMAGE_TAG: "v1"
     DOCKERFILE_CONTEXT: "example-voting-app/vote"
 
 permissions:
+  security-events: write
   contents: write
   actions: read
 
