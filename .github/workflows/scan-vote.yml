@@ -1,5 +1,5 @@
 
-name: Container build and scan
+name: scan vote
 
 on: [push, pull_request]
 
