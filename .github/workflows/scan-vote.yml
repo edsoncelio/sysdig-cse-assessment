@@ -1,7 +1,9 @@
 
 name: scan vote
 
-on: [push, pull_request]
+#on: [push, pull_request]
+on:
+    workflow_dispatch:
 
 env:
     SYSDIG_SECURE_ENDPOINT: "https://eu1.app.sysdig.com"
