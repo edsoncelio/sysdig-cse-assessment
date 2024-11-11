@@ -14,3 +14,7 @@ expose-results: ## expose the result sendpoint
 		@echo "expose the result endpoints"
 		kubectl port-forward svc/result 8081:8081 -n voting-app
 
+.PHONY: deploy-voting-app
+deploy-voting-app: ## deploy voting app
+		@echo "deploying voting app"
+		kubectl apply -f example-voting-app/
